@@ -1,5 +1,5 @@
-mod error_template;
-mod errors;
+pub mod err;
+
 #[cfg(feature = "ssr")]
 pub mod fallback;
 pub mod pages;

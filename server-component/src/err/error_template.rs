@@ -1,4 +1,5 @@
-use crate::errors::fivemintwentiesfourError;
+use crate::err::errors::fivemintwentiesfourError;
+
 use leptos::{ Errors, * };
 #[cfg(feature = "ssr")]
 use leptos_axum::ResponseOptions;

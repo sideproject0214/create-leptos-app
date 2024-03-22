@@ -1,7 +1,7 @@
 use leptos::*;
 use leptos_meta::*;
 use leptos_router::*;
-use crate::error_template::ErrorTemplate;
+use crate::err::error_template::ErrorTemplate;
 use crate::functions::todo::{ get_todos, add_todo, delete_todo, AddTodo, DeleteTodo };
 
 #[component]
