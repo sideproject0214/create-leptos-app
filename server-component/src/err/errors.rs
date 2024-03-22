@@ -2,18 +2,18 @@ use http::status::StatusCode;
 use thiserror::Error;
 
 #[derive(Debug, Clone, Error)]
-pub enum fivemintwentiesfourError {
+pub enum FivemintwentiesfourError {
     #[error("Not Found")]
     NotFound,
     #[error("Internal Server Error")]
     InternalServerError,
 }
 
-impl fivemintwentiesfourError {
+impl FivemintwentiesfourError {
     pub fn status_code(&self) -> StatusCode {
         match self {
-            fivemintwentiesfourError::NotFound => StatusCode::NOT_FOUND,
-            fivemintwentiesfourError::InternalServerError => { StatusCode::INTERNAL_SERVER_ERROR }
+            FivemintwentiesfourError::NotFound => StatusCode::NOT_FOUND,
+            FivemintwentiesfourError::InternalServerError => { StatusCode::INTERNAL_SERVER_ERROR }
         }
     }
 }

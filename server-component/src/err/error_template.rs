@@ -1,4 +1,4 @@
-use crate::err::errors::fivemintwentiesfourError;
+use crate::err::errors::FivemintwentiesfourError;
 
 use leptos::{ Errors, * };
 #[cfg(feature = "ssr")]
@@ -22,10 +22,10 @@ pub fn ErrorTemplate(
 
     // Get Errors from Signal
     // Downcast lets us take a type that implements `std::error::Error`
-    let errors: Vec<fivemintwentiesfourError> = errors
+    let errors: Vec<FivemintwentiesfourError> = errors
         .get()
         .into_iter()
-        .filter_map(|(_, v)| v.downcast_ref::<fivemintwentiesfourError>().cloned())
+        .filter_map(|(_, v)| v.downcast_ref::<FivemintwentiesfourError>().cloned())
         .collect();
 
     // Only the response code for the first error is actually sent from the server

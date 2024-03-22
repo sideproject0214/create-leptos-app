@@ -2,7 +2,7 @@ use leptos::*;
 use leptos_meta::*;
 use leptos_router::*;
 use crate::err::error_template::ErrorTemplate;
-use crate::functions::todo::{ get_todos, add_todo, delete_todo, AddTodo, DeleteTodo };
+use crate::functions::todo::{ get_todos, AddTodo, DeleteTodo };
 
 #[component]
 pub fn Fivemintwentiesfour() -> impl IntoView {
