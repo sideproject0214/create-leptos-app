@@ -1,9 +1,9 @@
-FROM postgres:16.1-alpine
+FROM postgres:16.2-alpine
 
 EXPOSE 5432
 
 VOLUME [ "../db:/var/lib/postgresql/data","/etc/localtime:/etc/localtime"]
 
-ENV  POSTGRES_DB=todo POSTGRES_USER=dev POSTGRES_PASSWORD=password123
+ENV  POSTGRES_DB=fmtf POSTGRES_USER=dev POSTGRES_PASSWORD=password123
 
 
