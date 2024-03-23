@@ -6,9 +6,9 @@ use crate::functions::todo::{ get_todos, AddTodo, DeleteTodo };
 
 #[component]
 pub fn Fivemintwentiesfour() -> impl IntoView {
-    //let id = use_context::<String>();
-    provide_meta_context();
-    view! {
+  //let id = use_context::<String>();
+  provide_meta_context();
+  view! {
         <Link rel="shortcut icon" type_="image/ico" href="/favicon.ico"/>
         <Stylesheet id="leptos" href="/pkg/todo_app_sqlite_axum.css"/>
         <Router>
@@ -26,17 +26,17 @@ pub fn Fivemintwentiesfour() -> impl IntoView {
 
 #[component]
 pub fn Todos() -> impl IntoView {
-    let add_todo = create_server_multi_action::<AddTodo>();
-    let delete_todo = create_server_action::<DeleteTodo>();
-    let submissions = add_todo.submissions();
+  let add_todo = create_server_multi_action::<AddTodo>();
+  let delete_todo = create_server_action::<DeleteTodo>();
+  let submissions = add_todo.submissions();
 
-    // list of todos is loaded from the server in reaction to changes
-    let todos = create_resource(
-        move || (add_todo.version().get(), delete_todo.version().get()),
-        move |_| get_todos()
-    );
+  // list of todos is loaded from the server in reaction to changes
+  let todos = create_resource(
+    move || (add_todo.version().get(), delete_todo.version().get()),
+    move |_| get_todos()
+  );
 
-    view! {
+  view! {
         <div>
             <MultiActionForm action=add_todo>
                 <label>

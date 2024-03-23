@@ -25,7 +25,10 @@ tower-http = { version = "0.5", features = ["fs"], optional = true }
 tokio = { version = "1", features = ["full"], optional = true }
 sqlx = { version = "0.7", features = [
 	"runtime-tokio-rustls",
-	"sqlite",
+	"postgres",
+	"uuid",
+	"chrono",
+	"macros",
 ], optional = true }
 thiserror = "1.0"
 wasm-bindgen = "0.2"
